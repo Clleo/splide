@@ -1,0 +1,24 @@
+<!-- Thanks for the nice slider.
+
+I would like to suggest that you rethink the approach to lazy loading of images.
+
+1. The correct approach would be to keep the path to the original image.
+that is, the <a> tag must have the src attribute.
+
+(This is useful for SEO. Search engine spiders will find original images.)
+
+2. To be able to place a SVG stub, it will serve as a preloader for the image, and will help to maintain the correct layout position.
+
+An example of the most correctly configured lacy load
+
+-->
+
+<img class="lozad"
+	srcset="/files/preload_250x400.svg"
+	data-srcset="/files/image.jpg"
+	src="/files/image.jpg"
+	alt="Image" width="250" height="400">
+
+<!-- One of the few existing correctly made lazy load scripts here -->
+
+<a src="https://github.com/ApoorvSaxena/lozad.js">lozad.js</a>
